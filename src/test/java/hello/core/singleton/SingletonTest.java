@@ -28,4 +28,28 @@ public class SingletonTest {
         //memberService1 != memberService2
         assertThat(memberService1).isNotSameAs(memberService2);
     }
+
+    @Test
+    @DisplayName("Singleton パターンを適用したオブジェクト使用")
+    public void singletonServiceTest() {
+
+        //privateでコンストラクタを防いでおいたので、コンパイルエラーが発生
+        //new SingletonService();
+
+        //1. 照会：呼び出したびに、同様オブジェクトを渡す
+        SingletonService singletonService1 = SingletonService.getInstance();
+        //2. 照会：呼び出したびに、同様オブジェクトを渡す
+        SingletonService singletonService2 = SingletonService.getInstance();
+
+        //参照値が同じことを確認
+        System.out.println("singletonService1 = " + singletonService1);
+        System.out.println("singletonService2 = " + singletonService2);
+
+        // singletonService1 == singletonService2
+        assertThat(singletonService1).isSameAs(singletonService2);
+
+        singletonService1.logic();
+    }
 }
+
+
