@@ -8,6 +8,14 @@ group = 'hello'
 version = '0.0.1-SNAPSHOT'
 description = 'Demo project for Spring Boot'
 
+//lombok 設定追加開始
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+//lombok 設定追加完了
+
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(21)
@@ -20,6 +28,15 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
+
+	//lombok ライブラリ追加開始
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+	//lombok ライブラリ追加完了
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
