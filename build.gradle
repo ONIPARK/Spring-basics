@@ -27,7 +27,8 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
+	implemen tation 'org.springframework.boot:spring-boot-starter'
+	implementation 'jakarta.inject:jakarta.inject-api:2.0.1'
 
 	//lombok ライブラリ追加開始
 	compileOnly 'org.projectlombok:lombok'
