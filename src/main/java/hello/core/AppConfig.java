@@ -21,7 +21,7 @@ public class AppConfig {
         return new MemberServiceImpl(memberRepository());
     }
 
-    @Bean
+    //@Bean
     public MemberRepository memberRepository() {
         // 二番、三番?
         System.out.println("call AppConfig.memberRepository");

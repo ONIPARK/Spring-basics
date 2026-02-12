@@ -1,4 +1,4 @@
-plugins {
+ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.5.8'
 	id 'io.spring.dependency-management' version '1.1.7'
@@ -27,7 +27,9 @@ repositories {
 }
 
 dependencies {
-	implemen tation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter'
+	//Web library　追加
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'jakarta.inject:jakarta.inject-api:2.0.1'
 
 	//lombok ライブラリ追加開始
