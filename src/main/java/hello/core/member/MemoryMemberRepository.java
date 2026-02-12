@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 // 実装体(データが未確定)
-@Component
+//@Component
 public class MemoryMemberRepository implements MemberRepository {
 
     // Repository
